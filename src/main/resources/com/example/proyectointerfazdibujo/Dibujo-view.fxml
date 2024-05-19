@@ -6,6 +6,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectointerfazdibujo.Contoller.DibujoController">
    <children>
+      <AnchorPane layoutY="167.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 5px 5px 0px; -fx-background-radius: 0px 10px 10px 0px; -fx-border-radius: 0px 10px 10px 0px;" />
       <Button fx:id="BPincel" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
@@ -20,6 +21,33 @@
             <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@/iconPluma.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="14.0" layoutY="311.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/iconLapiz.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="14.0" layoutY="369.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/iconCirculo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="14.0" layoutY="428.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/iconBorrador.png" />
                </image>
             </ImageView>
          </graphic>
