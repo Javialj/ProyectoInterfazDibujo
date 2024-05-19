@@ -6,51 +6,85 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectointerfazdibujo.Contoller.DibujoController">
    <children>
-      <AnchorPane layoutY="167.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 5px 5px 0px; -fx-background-radius: 0px 10px 10px 0px; -fx-border-radius: 0px 10px 10px 0px;" />
-      <Button fx:id="BPincel" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
-         <graphic>
-            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/iconPincel.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="14.0" layoutY="251.0" mnemonicParsing="false">
-         <graphic>
-            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/iconPluma.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="14.0" layoutY="311.0" mnemonicParsing="false">
-         <graphic>
-            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/iconLapiz.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="14.0" layoutY="369.0" mnemonicParsing="false">
-         <graphic>
-            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/iconCirculo.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="14.0" layoutY="428.0" mnemonicParsing="false">
-         <graphic>
-            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/iconBorrador.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <AnchorPane layoutY="167.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 5px 5px 0px; -fx-background-radius: 0px 10px 10px 0px; -fx-border-radius: 0px 10px 10px 0px;" AnchorPane.topAnchor="167.0">
+         <children>
+            <Button fx:id="BPincel" layoutX="14.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconPincel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="88.0" mnemonicParsing="false" AnchorPane.leftAnchor="14.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconPluma.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="145.0" mnemonicParsing="false" AnchorPane.leftAnchor="14.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconLapiz.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="261.0" mnemonicParsing="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconBorrador.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="205.0" mnemonicParsing="false" AnchorPane.leftAnchor="14.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconCirculo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="926.0" layoutY="167.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 0px 5px 5px; -fx-background-radius: 10px 0px 0px 10px; -fx-border-radius: 10px 0px 0px 10px;" AnchorPane.topAnchor="167.0">
+         <children>
+            <Button layoutX="18.0" layoutY="42.0" mnemonicParsing="false" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="42.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconGuardar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="18.0" layoutY="146.0" mnemonicParsing="false" AnchorPane.bottomAnchor="145.0" AnchorPane.topAnchor="146.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconInicio.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="18.0" layoutY="247.0" mnemonicParsing="false" AnchorPane.bottomAnchor="42.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconEngranaje.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="400.0" layoutY="227.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 5px;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0" />
    </children>
 </AnchorPane>
