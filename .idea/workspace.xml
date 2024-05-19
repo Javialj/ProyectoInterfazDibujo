@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2557156c-dbd9-4706-b189-9cefb583ba7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectointerfazdibujo/App/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectointerfazdibujo/Contoller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/iconPincel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/icons8-pluma-50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectointerfazdibujo/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="2557156c-dbd9-4706-b189-9cefb583ba7c" name="Changes" comment="Errores:archivo no encontrado(solucionado);Proyecto comienzo.(19/05/2024)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,16 +64,9 @@
       <recent name="C:\Users\K41n\IdeaProjects\ProyectoInterfazDibujo\src\main\resources\com\example\proyectointerfazdibujo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
-    <configuration name="Existe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Existe" />
-      <module name="ProyectoInterfazDibujo" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.proyectointerfazdibujo.App.HelloApplication" />
+  <component name="RunManager" selected="Application.DibujoApp">
+    <configuration name="DibujoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.proyectointerfazdibujo.App.DibujoApp" />
       <module name="ProyectoInterfazDibujo" />
       <extension name="coverage">
         <pattern>
@@ -103,9 +78,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Existe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Existe" />
+      <module name="ProyectoInterfazDibujo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.DibujoApp" />
         <item itemvalue="Application.Existe" />
       </list>
     </recent_temporary>
@@ -131,10 +113,24 @@
       <workItem from="1716123781771" duration="2303000" />
       <workItem from="1716126099891" duration="450000" />
       <workItem from="1716126576135" duration="362000" />
+      <workItem from="1716126965357" duration="743000" />
     </task>
+    <task id="LOCAL-00001" summary="Errores:archivo no encontrado(solucionado);Proyecto comienzo.(19/05/2024)">
+      <option name="closed" value="true" />
+      <created>1716127703493</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716127703493</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Errores:archivo no encontrado(solucionado);Proyecto comienzo.(19/05/2024)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Errores:archivo no encontrado(solucionado);Proyecto comienzo.(19/05/2024)" />
   </component>
 </project>

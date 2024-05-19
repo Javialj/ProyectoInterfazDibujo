@@ -1,10 +1,9 @@
 package com.example.proyectointerfazdibujo.Contoller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
-public class HelloController {
+public class DibujoController {
     @FXML
     private ImageView imageView;
 

@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.proyectointerfazdibujo/com.example.proyectointerfazdibujo.App.HelloApplication
+                                com.example.proyectointerfazdibujo/com.example.proyectointerfazdibujo.App.DibujoApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
