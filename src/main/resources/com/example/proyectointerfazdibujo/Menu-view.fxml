@@ -7,14 +7,35 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectointerfazdibujo.Contoller.MenuController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="244.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@/Logo.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="428.0" layoutY="112.0" text="ArtZone" textFill="WHITE" AnchorPane.rightAnchor="246.0">
+      <Label fx:id="LArt" layoutX="269.0" layoutY="285.0" text="ArtZone" textFill="WHITE" AnchorPane.bottomAnchor="365.0" AnchorPane.rightAnchor="251.0">
          <font>
             <Font name="Garamond" size="96.0" />
-         </font></Label>
+         </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/Logo.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+      <Button fx:id="BDibujar" layoutX="436.0" layoutY="421.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 10px; -fx-border-style: dashed;" text="Dibujar">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="BAjustes" layoutX="439.0" layoutY="517.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 10px; -fx-border-style: dashed;" text="Ajustes">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Label layoutX="463.0" layoutY="639.0" prefHeight="44.0" prefWidth="88.0" text="KainArt">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/iconCopy.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
    </children>
 </AnchorPane>

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2557156c-dbd9-4706-b189-9cefb583ba7c" name="Changes" comment="Errores:archivo no encontrado(solucionado);Proyecto comienzo.&#10;Preparando Scene Builder(19/05/2024)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectointerfazdibujo/App/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectointerfazdibujo/Contoller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/Logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectointerfazdibujo/Menu-view.fxml" afterDir="false" />
+    <list default="true" id="2557156c-dbd9-4706-b189-9cefb583ba7c" name="Changes" comment="Creación de un menú inicio(20/05/2024)">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/iconCopy.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectointerfazdibujo/Contoller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectointerfazdibujo/Contoller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectointerfazdibujo/Menu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectointerfazdibujo/Menu-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,28 +55,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DibujoApp.executor": "Run",
-    "Application.Existe.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Menu.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/K41n/IdeaProjects/ProyectoInterfazDibujo/src/main/resources/com/example/proyectointerfazdibujo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DibujoApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Existe.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Menu.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/K41n/IdeaProjects/ProyectoInterfazDibujo/src/main/resources/com/example/proyectointerfazdibujo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\K41n\IdeaProjects\ProyectoInterfazDibujo\src\main\resources\com\example\proyectointerfazdibujo" />
@@ -158,7 +157,8 @@
       <workItem from="1716126965357" duration="916000" />
       <workItem from="1716127899822" duration="2262000" />
       <workItem from="1716148717625" duration="711000" />
-      <workItem from="1716215724438" duration="1302000" />
+      <workItem from="1716215724438" duration="2527000" />
+      <workItem from="1716218320711" duration="2141000" />
     </task>
     <task id="LOCAL-00001" summary="Errores:archivo no encontrado(solucionado);Proyecto comienzo.(19/05/2024)">
       <option name="closed" value="true" />
@@ -192,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716149420610</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creación de un menú inicio(20/05/2024)">
+      <option name="closed" value="true" />
+      <created>1716217093354</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716217093354</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +209,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Errores:archivo no encontrado(solucionado);Proyecto comienzo.(19/05/2024)" />
     <MESSAGE value="Errores:archivo no encontrado(solucionado);Proyecto comienzo.&#10;Preparando Scene Builder(19/05/2024)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Errores:archivo no encontrado(solucionado);Proyecto comienzo.&#10;Preparando Scene Builder(19/05/2024)" />
+    <MESSAGE value="Creación de un menú inicio(20/05/2024)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación de un menú inicio(20/05/2024)" />
   </component>
 </project>
