@@ -1,6 +1,7 @@
 module com.example.proyectointerfazdibujo {
-    requires javafx.controls;
+    requires transitive javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.example.proyectointerfazdibujo to javafx.fxml;

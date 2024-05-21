@@ -3,10 +3,17 @@ package com.example.proyectointerfazdibujo.Contoller;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class MenuController {
     @FXML
@@ -15,6 +22,9 @@ public class MenuController {
     private Button BAjustes;
     @FXML
     private Label LArt;
+    @FXML
+    private AnchorPane AFondo;
+
     private void Translate(){
         TranslateTransition tT1 = new TranslateTransition(Duration.seconds(1.5),BDibujar);
         tT1.setByY(-40);
@@ -43,9 +53,14 @@ public class MenuController {
         fT3.setToValue(1);
         fT3.play();
     }
+    private void VentanaAjustes() {
+        BAjustes.setOnAction(e -> AFondo.setVisible(false));
+    }
     @FXML
     protected void initialize() {
         Translate();
         Aparicion();
+        VentanaAjustes();
     }
+
 }
