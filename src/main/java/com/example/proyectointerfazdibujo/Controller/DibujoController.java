@@ -1,11 +1,20 @@
-package com.example.proyectointerfazdibujo.Contoller;
+package com.example.proyectointerfazdibujo.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+
+import java.io.IOException;
 
 public class DibujoController {
     @FXML
@@ -18,6 +27,8 @@ public class DibujoController {
     private Button BFiguras;
     @FXML
     private Button BBorrador;
+    @FXML
+    private Button BInicio;
     @FXML
     private Canvas canvas;
 
@@ -38,9 +49,30 @@ public class DibujoController {
     }
     @FXML
     protected void initialize() {
+
         BPincel.setOnAction(e -> Pincel());
         BLapiz.setOnAction(e -> Lapiz());
         BBorrador.setOnAction(null);
+        BInicio.setOnAction(event -> {
+            try {
+                irInicio(event);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+    @FXML
+    protected void irInicio(ActionEvent event) throws IOException {
+        Object o = event.getSource();
+        Node node = (Node) o;
+        Scene scene1 = node.getScene();
+        Window window = scene1.getWindow();
+        Stage stage = (Stage) window;
+
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/proyectointerfazdibujo/Menu-view.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Menu");
+        stage.setScene(scene);
     }
 
 
