@@ -59,7 +59,6 @@ public class DibujoController {
         if (Objects.equals(valor, "PNG")){
             WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
             canvas.snapshot(null, writableImage);
-            // Guardar la imagen en un archivo
             File file = new File("canvasImage.png");
             try {
                 ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "png", file);
@@ -70,7 +69,6 @@ public class DibujoController {
         } else if (Objects.equals(valor,"JPEG")) {
             WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
             canvas.snapshot(null, writableImage);
-            // Guardar la imagen en un archivo
             File file = new File("canvasImage.jpeg");
             try {
                 ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "jpeg", file);
@@ -81,7 +79,7 @@ public class DibujoController {
         } else if (Objects.equals(valor,"SVG")) {
             WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
             canvas.snapshot(null, writableImage);
-            // Guardar la imagen en un archivo
+
             File file = new File("canvasImage.svg");
             try {
                 ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "svg", file);
@@ -166,17 +164,5 @@ public class DibujoController {
     }
     private void dibujarTextura(double x, double y) {
         gc.drawImage(texture, x, y, texture.getWidth(), texture.getHeight());
-    }
-    private void saveCanvasAsImage(Canvas canvas) {
-        WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
-        canvas.snapshot(null, writableImage);
-        // Guardar la imagen en un archivo
-        File file = new File("canvasImage.png");
-        try {
-            ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "png", file);
-            System.out.println("Imagen guardada como: " + file.getAbsolutePath());
-        } catch (IOException e) {
-            System.out.println("Error al guardar la imagen: " + e.getMessage());
-        }
     }
 }
