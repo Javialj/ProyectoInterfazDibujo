@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="AFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectointerfazdibujo.Controller.MenuController">
+<AnchorPane fx:id="AFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectointerfazdibujo.Controller.MenuController">
    <children>
-      <ImageView fitHeight="800.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="606.0" fitWidth="878.0" layoutX="76.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@/fondo.gif" />
          </image>
       </ImageView>
-      <Label fx:id="LArt" layoutX="270.0" layoutY="207.0" text="ArtZone" textFill="WHITE" AnchorPane.bottomAnchor="443.0" AnchorPane.rightAnchor="250.0">
+      <Label fx:id="LArt" layoutX="260.0" layoutY="192.0" text="ArtZone" textFill="WHITE" AnchorPane.bottomAnchor="258.0" AnchorPane.rightAnchor="260.0">
          <font>
             <Font name="Garamond" size="96.0" />
          </font>
@@ -23,12 +23,12 @@
                </image>
             </ImageView>
          </graphic></Label>
-      <Button fx:id="BDibujar" layoutX="439.0" layoutY="424.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 10px; -fx-border-style: dashed;" text="Dibujar">
+      <Button fx:id="BDibujar" layoutX="260.0" layoutY="424.0" mnemonicParsing="false" onAction="#irDibujo" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 10px; -fx-border-style: dashed;" text="Dibujar" AnchorPane.leftAnchor="260.0">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button fx:id="BAjustes" layoutX="439.0" layoutY="517.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 10px; -fx-border-style: dashed;" text="Ajustes">
+      <Button fx:id="BAjustes" layoutX="599.0" layoutY="424.0" mnemonicParsing="false" onAction="#MAjustes" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 10px; -fx-border-style: dashed;" text="Ajustes" AnchorPane.rightAnchor="260.0">
          <font>
             <Font size="30.0" />
          </font>
@@ -45,9 +45,10 @@
             <Font name="Bauhaus 93" size="12.0" />
          </font>
       </Label>
-      <Pane fx:id="MAjustes" layoutX="365.0" layoutY="302.0" opacity="0.9" prefHeight="315.0" prefWidth="290.0" style="-fx-background-color: black; -fx-border-color: grey; -fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+      <AnchorPane fx:id="MAjustes" layoutX="362.0" layoutY="267.0" opacity="0.9" prefHeight="315.0" prefWidth="290.0" style="-fx-background-color: black; -fx-border-color: grey; -fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5px;">
          <children>
-            <Button fx:id="BCerrar" layoutX="240.0" layoutY="14.0" mnemonicParsing="false" opacity="0.57" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+            <ComboBox fx:id="CBox" layoutX="34.0" layoutY="84.0" prefHeight="25.0" prefWidth="223.0" />
+            <Button fx:id="BCerrar" layoutX="240.0" layoutY="14.0" mnemonicParsing="false" onAction="#MAjustesCerrar" opacity="0.57" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -56,7 +57,12 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Label fx:id="LArt1" layoutX="34.0" layoutY="52.0" text="Formato a guardar:" textFill="WHITE">
+               <font>
+                  <Font name="Garamond" size="22.0" />
+               </font>
+            </Label>
          </children>
-      </Pane>
+      </AnchorPane>
    </children>
 </AnchorPane>

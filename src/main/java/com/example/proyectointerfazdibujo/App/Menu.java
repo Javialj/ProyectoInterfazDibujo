@@ -12,7 +12,7 @@ public class Menu extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Menu.class.getResource("/com/example/proyectointerfazdibujo/Menu-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
 
         stage.setTitle("ProyectoInterfazDibujo");
         stage.setScene(scene);

@@ -12,7 +12,7 @@ public class DibujoApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DibujoApp.class.getResource("/com/example/proyectointerfazdibujo/Dibujo-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
 
         stage.setTitle("ProyectoInterfazDibujo");
         stage.setScene(scene);

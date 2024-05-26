@@ -1,6 +1,8 @@
 package com.example.proyectointerfazdibujo.Controller;
 
+import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
+import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -16,6 +20,8 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 
+import javax.sound.midi.InvalidMidiDataException;
+import javax.sound.midi.Sequence;
 import java.io.IOException;
 
 public class MenuController {
@@ -30,8 +36,11 @@ public class MenuController {
     @FXML
     private AnchorPane AFondo;
     @FXML
-    private Pane MAjustes;
+    private AnchorPane MAjustes;
+    @FXML
+    private ComboBox<String> CBox;
 
+    @FXML
     private void MAjustes() {
         MAjustes.setVisible(true);
         TranslateTransition tT4 = new TranslateTransition(Duration.seconds(1.5),MAjustes);
@@ -39,7 +48,42 @@ public class MenuController {
         tT4.setAutoReverse(true);
         tT4.play();
         FadeTransition fT4 = new FadeTransition(Duration.seconds(2),MAjustes);
+        fT4.setFromValue(0);
+        fT4.setToValue(1);
         fT4.play();
+    }
+    @FXML
+    private void MAjustesCerrar() throws InvalidMidiDataException {
+        TranslateTransition tT4 = new TranslateTransition(Duration.seconds(1.5),MAjustes);
+        tT4.setByY(50);
+        tT4.setAutoReverse(true);
+        tT4.play();
+        FadeTransition fT4 = new FadeTransition(Duration.seconds(2),MAjustes);
+        fT4.setFromValue(1);
+        fT4.setToValue(0);
+        fT4.play();
+        SequentialTransition sequence = new SequentialTransition(tT4, fT4);
+        sequence.setOnFinished(e -> MAjustes.setVisible(false));
+    }
+    @FXML
+    protected void irDibujo(ActionEvent event) throws IOException {
+        Object o = event.getSource();
+        Node node = (Node) o;
+        Scene scene1 = node.getScene();
+        Window window = scene1.getWindow();
+        Stage stage = (Stage) window;
+
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/proyectointerfazdibujo/Dibujo-view.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Menu");
+        stage.setScene(scene);
+    }
+    @FXML
+    protected void initialize() {
+        Translate();
+        Aparicion();
+        MAjustes.setVisible(false);
+        CBox.getItems().addAll("PNG", "JPEG", "SVG");
     }
     private void Translate(){
         TranslateTransition tT1 = new TranslateTransition(Duration.seconds(1.5),BDibujar);
@@ -70,34 +114,6 @@ public class MenuController {
         fT3.play();
     }
 
-    @FXML
-    protected void initialize() {
-        Translate();
-        Aparicion();
-        MAjustes.setVisible(false);
-        BAjustes.setOnAction(e -> MAjustes());
-        BDibujar.setOnAction(event -> {
-            try {
-                irDibujo(event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-        BCerrar.setOnAction(e -> MAjustes.setVisible(false));
-    }
-    @FXML
-    protected void irDibujo(ActionEvent event) throws IOException {
-        Object o = event.getSource();
-        Node node = (Node) o;
-        Scene scene1 = node.getScene();
-        Window window = scene1.getWindow();
-        Stage stage = (Stage) window;
-
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/proyectointerfazdibujo/Dibujo-view.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("Menu");
-        stage.setScene(scene);
-    }
 
 
 

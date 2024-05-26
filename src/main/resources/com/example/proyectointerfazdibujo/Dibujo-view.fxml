@@ -4,12 +4,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectointerfazdibujo.Controller.DibujoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectointerfazdibujo.Controller.DibujoController">
    <children>
-      <AnchorPane layoutY="240.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 5px 5px 0px; -fx-background-radius: 0px 10px 10px 0px; -fx-border-radius: 0px 10px 10px 0px;" AnchorPane.topAnchor="240.0">
+      <AnchorPane layoutY="140.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 5px 5px 0px; -fx-background-radius: 0px 10px 10px 0px; -fx-border-radius: 0px 10px 10px 0px;" AnchorPane.topAnchor="140.0">
          <children>
-            <Button fx:id="BPincel" layoutX="14.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+            <Button fx:id="BPincel" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" onAction="#Pincel" prefHeight="25.0" prefWidth="24.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="41.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -18,7 +19,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="BPluma" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" AnchorPane.leftAnchor="14.0">
+            <Button fx:id="BPluma" layoutX="14.0" layoutY="114.0" mnemonicParsing="false" onAction="#Pluma" AnchorPane.leftAnchor="14.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -27,7 +28,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="BLapiz" layoutX="14.0" layoutY="145.0" mnemonicParsing="false" AnchorPane.leftAnchor="14.0">
+            <Button fx:id="BLapiz" layoutX="14.0" layoutY="177.0" mnemonicParsing="false" onAction="#Lapiz" AnchorPane.leftAnchor="14.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -36,7 +37,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="BBorrador" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0">
+            <Button fx:id="BBorrador" layoutX="14.0" layoutY="248.0" mnemonicParsing="false" onAction="#Borrador" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="14.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -45,18 +46,9 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="BFiguras" layoutX="14.0" layoutY="205.0" mnemonicParsing="false" AnchorPane.leftAnchor="14.0">
-               <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@/iconCirculo.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="919.0" layoutY="234.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 0px 5px 5px; -fx-background-radius: 10px 0px 0px 10px; -fx-border-radius: 10px 0px 0px 10px;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="234.0">
+      <AnchorPane layoutX="926.0" layoutY="134.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 0px 5px 5px; -fx-background-radius: 10px 0px 0px 10px; -fx-border-radius: 10px 0px 0px 10px;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
          <children>
             <Button layoutX="18.0" layoutY="42.0" mnemonicParsing="false" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="42.0">
                <graphic>
@@ -67,7 +59,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="BInicio" layoutX="18.0" layoutY="146.0" mnemonicParsing="false" AnchorPane.bottomAnchor="145.0" AnchorPane.topAnchor="146.0">
+            <Button fx:id="BInicio" layoutX="18.0" layoutY="146.0" mnemonicParsing="false" onAction="#irInicio" AnchorPane.bottomAnchor="145.0" AnchorPane.topAnchor="146.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -76,7 +68,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="18.0" layoutY="247.0" mnemonicParsing="false" AnchorPane.bottomAnchor="42.0">
+            <Button fx:id="BConfig" layoutX="18.0" layoutY="247.0" mnemonicParsing="false" onAction="#MAjustes" AnchorPane.bottomAnchor="42.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -88,7 +80,28 @@
          </children></AnchorPane>
       <AnchorPane layoutX="400.0" layoutY="227.0" maxHeight="600.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 5px;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
          <children>
-            <Canvas fx:id="canvas" height="600.0" layoutX="1.0" layoutY="1.0" width="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-         </children></AnchorPane>
+            <Canvas fx:id="canvas" height="400.0" width="800.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MAjustes" layoutX="355.0" layoutY="264.0" opacity="0.9" prefHeight="315.0" prefWidth="290.0" style="-fx-background-color: black; -fx-border-color: grey; -fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+         <children>
+            <ComboBox fx:id="CBox" layoutX="34.0" layoutY="84.0" prefHeight="25.0" prefWidth="223.0" />
+            <Button fx:id="BCerrar" layoutX="240.0" layoutY="14.0" mnemonicParsing="false" onAction="#MAjustesCerrar" opacity="0.57" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/iconX.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="34.0" layoutY="50.0" text="Formato a guardar:" textFill="WHITE">
+               <font>
+                  <Font name="Garamond" size="22.0" />
+               </font>
+            </Label>
+
+               </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
