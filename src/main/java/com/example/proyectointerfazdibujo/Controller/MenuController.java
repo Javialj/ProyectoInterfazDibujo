@@ -40,6 +40,12 @@ public class MenuController {
     @FXML
     private ComboBox<String> CBox;
 
+
+    @FXML
+    public String formato() {
+        String valor = CBox.getValue();
+        return valor;
+    }
     @FXML
     private void MAjustes() {
         MAjustes.setVisible(true);

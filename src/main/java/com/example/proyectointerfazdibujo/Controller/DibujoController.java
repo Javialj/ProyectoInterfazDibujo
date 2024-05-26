@@ -3,6 +3,7 @@ package com.example.proyectointerfazdibujo.Controller;
 import javafx.animation.FadeTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,6 +30,7 @@ import javax.imageio.ImageIO;
 import javax.sound.midi.InvalidMidiDataException;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class DibujoController {
 
@@ -38,16 +40,56 @@ public class DibujoController {
     private ComboBox<String> CBox;
     @FXML
     private AnchorPane MAjustes;
-
+    String valor;
     private GraphicsContext gc;
     private Image texture;
-
+    @FXML
+    public void formato() {
+        valor = CBox.getValue();
+    }
     @FXML
     private void Pincel(){
         gc = canvas.getGraphicsContext2D();
         texture = new Image(getClass().getResourceAsStream("/Imagenes/texturaPincel.png"));
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, this::presionarMause);
         canvas.addEventHandler(MouseEvent.MOUSE_DRAGGED, this::arratrarMause);
+    }
+    @FXML
+    private void guardar(){
+        if (Objects.equals(valor, "PNG")){
+            WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
+            canvas.snapshot(null, writableImage);
+            // Guardar la imagen en un archivo
+            File file = new File("canvasImage.png");
+            try {
+                ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "png", file);
+                System.out.println("Imagen guardada como: " + file.getAbsolutePath());
+            } catch (IOException e) {
+                System.out.println("Error al guardar la imagen: " + e.getMessage());
+            }
+        } else if (Objects.equals(valor,"JPEG")) {
+            WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
+            canvas.snapshot(null, writableImage);
+            // Guardar la imagen en un archivo
+            File file = new File("canvasImage.jpeg");
+            try {
+                ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "jpeg", file);
+                System.out.println("Imagen guardada como: " + file.getAbsolutePath());
+            } catch (IOException e) {
+                System.out.println("Error al guardar la imagen: " + e.getMessage());
+            }
+        } else if (Objects.equals(valor,"SVG")) {
+            WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
+            canvas.snapshot(null, writableImage);
+            // Guardar la imagen en un archivo
+            File file = new File("canvasImage.svg");
+            try {
+                ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "svg", file);
+                System.out.println("Imagen guardada como: " + file.getAbsolutePath());
+            } catch (IOException e) {
+                System.out.println("Error al guardar la imagen: " + e.getMessage());
+            }
+        }
     }
     @FXML
     private void Lapiz(){
@@ -124,5 +166,17 @@ public class DibujoController {
     }
     private void dibujarTextura(double x, double y) {
         gc.drawImage(texture, x, y, texture.getWidth(), texture.getHeight());
+    }
+    private void saveCanvasAsImage(Canvas canvas) {
+        WritableImage writableImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
+        canvas.snapshot(null, writableImage);
+        // Guardar la imagen en un archivo
+        File file = new File("canvasImage.png");
+        try {
+            ImageIO.write(SwingFXUtils.fromFXImage(writableImage, null), "png", file);
+            System.out.println("Imagen guardada como: " + file.getAbsolutePath());
+        } catch (IOException e) {
+            System.out.println("Error al guardar la imagen: " + e.getMessage());
+        }
     }
 }

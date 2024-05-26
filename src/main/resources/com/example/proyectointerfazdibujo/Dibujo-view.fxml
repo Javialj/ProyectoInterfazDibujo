@@ -50,7 +50,7 @@
       </AnchorPane>
       <AnchorPane layoutX="926.0" layoutY="134.0" prefHeight="320.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-border-color: lightgrey; -fx-border-width: 5px 0px 5px 5px; -fx-background-radius: 10px 0px 0px 10px; -fx-border-radius: 10px 0px 0px 10px;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
          <children>
-            <Button layoutX="18.0" layoutY="42.0" mnemonicParsing="false" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="42.0">
+            <Button layoutX="18.0" layoutY="42.0" mnemonicParsing="false" onAction="#guardar" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="42.0">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -100,6 +100,7 @@
                   <Font name="Garamond" size="22.0" />
                </font>
             </Label>
+            <Button fx:id="BOk" layoutX="129.0" layoutY="250.0" mnemonicParsing="false" onAction="#formato" text="OK" />
 
                </children>
       </AnchorPane>
